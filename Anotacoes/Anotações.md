@@ -6,7 +6,7 @@ Este documento aborda conceitos de ORM (Object-Relational Mapping) e a arquitetu
 
 ## Estrutura ORM
 
-![Estrutura ORM](Anotacoes/EnityManager.png)
+![Estrutura ORM](EnityManager.png)
 
 ---
 
