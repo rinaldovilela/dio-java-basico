@@ -1,0 +1,18 @@
+Conceito de ORM e JPA 
+
+ORM (Object-Relational Mapping) é uma técnica que ajuda a conectar o mundo dos objetos em linguagens de programação (como classes em Java) com os bancos de dados relacionais (como tabelas SQL). Em vez de escrever manualmente consultas SQL, você usa uma ferramenta como o Hibernate para mapear automaticamente classes e objetos para tabelas e colunas no banco de dados.
+
+Como funciona?
+Modelo de Objetos (Classe): Você define classes em seu código (por exemplo, Usuario, Produto).
+
+Modelo de Dados (Tabela): Cada classe é mapeada para uma tabela no banco de dados (por exemplo, usuario, produto).
+
+Sincronização Automática: O ORM mantém essas classes e tabelas em sincronização.
+
+Acesso Simplificado: O desenvolvedor manipula dados diretamente com objetos Java. O Hibernate faz o trabalho pesado de traduzir essas operações para comandos SQL.
+
+Benefício principal
+Facilita o desenvolvimento, automatiza o mapeamento e reduz a complexidade de lidar com bancos de dados.
+
+
+
