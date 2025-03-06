@@ -19,7 +19,6 @@ public class SpringCopesSingletonPrototypeApplication {
 		return args -> {
 			sistema.enviarConfirmacaoCadastro();
 			sistema.enviarMensagemBoasVindas();
-			sistema.enviarConfirmacaoCadastro();
 		};
 	}
 }
