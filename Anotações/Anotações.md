@@ -1,0 +1,54 @@
+# ORM e Spring Boot: Explicação Completa
+
+Este documento aborda conceitos de ORM (Object-Relational Mapping) e a arquitetura de sistemas Spring Boot com JPA e Hibernate.
+
+---
+
+## O que é ORM?
+
+**ORM (Object-Relational Mapping)** é uma técnica usada para conectar o mundo dos objetos em linguagens de programação (como classes em Java) com bancos de dados relacionais. Isso permite que os desenvolvedores manipulem dados de maneira mais simples, sem a necessidade de escrever consultas SQL diretamente.
+
+### Como funciona?
+
+1. **Modelo de Objetos (Classe):** Você cria classes em Java (por exemplo, `Usuario`).
+2. **Modelo de Dados (Tabela):** Cada classe é mapeada para uma tabela no banco de dados.
+3. **Sincronização Automática:** O ORM mantém os objetos e tabelas sincronizados.
+4. **Acesso Simplificado:** Manipulação de dados diretamente com objetos Java, deixando o ORM traduzir em SQL.
+
+### Benefícios
+
+- Menos código SQL manual.
+- Simplificação no gerenciamento de bancos de dados.
+- Redução de inconsistências.
+
+---
+
+## Arquitetura do Spring Boot com JPA e Hibernate
+
+Aqui está uma visão geral de como o Spring Boot trabalha com JPA e Hibernate para gerenciar a persistência de dados em um sistema.
+
+### Componentes Principais:
+
+1. **JpaRepository:** Interface do Spring Data JPA que fornece métodos prontos (salvar, buscar, deletar).
+2. **EntityManager:** Responsável por gerenciar as entidades e executar comandos no banco de dados.
+3. **Hibernate:** Implementação do JPA usada para traduzir operações de alto nível em comandos SQL.
+4. **Datasource e Hikari:** Gerencia conexões com o banco, otimizando o desempenho.
+5. **Banco de Dados (H2):** Banco relacional usado para armazenar os dados.
+
+### Como funciona?
+
+1. O **JpaRepository** delega as operações para o **EntityManager**.
+2. O **EntityManager** usa o Hibernate para traduzir e executar os comandos no banco.
+3. O **Datasource** gerencia as conexões, garantindo eficiência.
+
+---
+
+## Imagens
+
+### Estrutura ORM
+
+<img>Anotações\img\EnityManager.png</img>
+
+### Arquitetura do Spring Boot
+
+<img>Anotações\img\ORM.png</img>

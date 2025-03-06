@@ -1,0 +1,39 @@
+Conceito de ORM e JPA 
+
+ORM (Object-Relational Mapping) é uma técnica que ajuda a conectar o mundo dos objetos em linguagens de programação (como classes em Java) com os bancos de dados relacionais (como tabelas SQL). Em vez de escrever manualmente consultas SQL, você usa uma ferramenta como o Hibernate para mapear automaticamente classes e objetos para tabelas e colunas no banco de dados.
+
+Como funciona?
+Modelo de Objetos (Classe): Você define classes em seu código (por exemplo, Usuario, Produto).
+
+Modelo de Dados (Tabela): Cada classe é mapeada para uma tabela no banco de dados (por exemplo, usuario, produto).
+
+Sincronização Automática: O ORM mantém essas classes e tabelas em sincronização.
+
+Acesso Simplificado: O desenvolvedor manipula dados diretamente com objetos Java. O Hibernate faz o trabalho pesado de traduzir essas operações para comandos SQL.
+
+Benefício principal
+Facilita o desenvolvimento, automatiza o mapeamento e reduz a complexidade de lidar com bancos de dados.
+
+
+
+
+a arquitetura de um sistema Java que usa Spring Data JPA e Hibernate para gerenciar a persistência de dados. Aqui está uma explicação completa, mas simplificada:
+
+JpaRepository: Essa é a interface principal do Spring Data JPA. Ela fornece métodos prontos (como salvar, buscar e deletar) para trabalhar com entidades e é implementada pelo SimpleJpaRepository.
+
+EntityManager: É a peça central do JPA, responsável por gerenciar entidades (como salvar, atualizar e deletar no banco de dados). O SimpleJpaRepository usa o EntityManager para interagir com o banco.
+
+Hibernate (SessionImpl): O Hibernate é a implementação do JPA usada neste caso. A classe SessionImpl implementa o EntityManager, traduzindo operações de alto nível (como salvar uma entidade) para comandos SQL.
+
+Datasource e Connection Pool (Hikari): Estes componentes gerenciam a conexão com o banco de dados. O HikariCP é usado como "pool de conexões", otimizando o desempenho ao reutilizar conexões com o banco.
+
+Banco de Dados (H2): É o banco de dados relacional usado neste exemplo. É acessado por meio das conexões gerenciadas pelo Datasource.
+
+Como tudo funciona:
+O JpaRepository chama o SimpleJpaRepository para executar operações no banco.
+
+O SimpleJpaRepository usa o EntityManager para enviar comandos ao banco.
+
+O Hibernate traduz esses comandos em SQL e os executa no banco de dados (H2) por meio do Datasource e do Connection Pool.
+
+Essa arquitetura facilita o desenvolvimento, abstraindo detalhes complexos de persistência, e permite que você trabalhe diretamente com objetos Java sem escrever SQL manualmente.
