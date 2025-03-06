@@ -6,7 +6,7 @@ Este documento aborda conceitos de ORM (Object-Relational Mapping) e a arquitetu
 
 ## Estrutura ORM
 
-![Estrutura ORM](Anotações/EntityManager.png)
+![Estrutura ORM](ORM.png)
 
 ---
 
@@ -31,7 +31,7 @@ Este documento aborda conceitos de ORM (Object-Relational Mapping) e a arquitetu
 
 ## Arquitetura do Spring Boot com JPA e Hibernate
 
-![Arquitetura do Spring Boot](Anotações/ORM.png)
+![Arquitetura do Spring Boot](EntityManager.png)
 
 Aqui está uma visão geral de como o Spring Boot trabalha com JPA e Hibernate para gerenciar a persistência de dados em um sistema.
 
